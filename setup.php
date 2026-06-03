@@ -37,33 +37,37 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Setup - AttendancePro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="assets/css/backstrap.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+<title>Setup - AttendEase</title>
+<link href="assets/backstrap/vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet"/>
+<link href="assets/backstrap/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
+<link href="assets/backstrap/css/style.min.css" rel="stylesheet"/>
+<link href="assets/css/custom.css" rel="stylesheet"/>
 </head>
-<body class="login-page">
-    <div class="login-container">
-        <div class="login-card">
-            <div class="login-header">
-                <div class="login-logo">
-                    <span class="material-symbols-outlined">settings</span>
-                </div>
-                <h1>Setup</h1>
-                <p>Initialize admin account</p>
-            </div>
-
-            <?php if ($message): ?>
-                <div class="alert-backstrap-success mb-3"><?php echo $message; ?></div>
-            <?php endif; ?>
-            <?php if ($error): ?>
-                <div class="alert-backstrap-error mb-3"><?php echo htmlspecialchars($error); ?></div>
-            <?php endif; ?>
-
-            <a href="login.php" class="btn btn-backstrap-primary btn-backstrap w-100">Go to Login</a>
-        </div>
-    </div>
+<body class="app flex-row align-items-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6 col-lg-5">
+<div class="card-group">
+<div class="card p-4">
+<div class="card-body text-center">
+<h1><i class="fa fa-cog fa-3x text-primary mb-3"></i></h1>
+<h1 class="mb-1 font-weight-bold">Setup</h1>
+<p class="text-muted">Initialize admin account</p>
+<?php if ($message): ?>
+<div class="alert alert-success"><?php echo $message; ?></div>
+<?php endif; ?>
+<?php if ($error): ?>
+<div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+<?php endif; ?>
+<a href="login.php" class="btn btn-primary btn-block"><i class="fa fa-arrow-left"></i> Go to Login</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>

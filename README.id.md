@@ -1,5 +1,7 @@
 # AttendaEase
 
+> **English?** Lihat [README.md](README.md) — Documentation in English.
+
 Sistem manajemen absensi karyawan sederhana dengan fitur CRUD lengkap, dibangun menggunakan PHP, MySQL, dan template Backstrap.
 
 ## Tech Stack
@@ -8,9 +10,10 @@ Sistem manajemen absensi karyawan sederhana dengan fitur CRUD lengkap, dibangun 
 |-------------|----------------------------------------------|
 | Backend     | PHP 8.0 (Murni)                              |
 | Database    | MySQL / MariaDB via MySQLi                   |
-| Frontend    | HTML5, CSS3, Bootstrap 5.3.2                 |
-| Ikon        | Material Symbols (Google Icons)              |
-| Font        | Inter (Google Fonts)                         |
+| Frontend    | HTML5, CSS3, Bootstrap 4.6 + CoreUI 2       |
+| Template    | Backstrap (`@digitallyhappy/backstrap`)     |
+| Ikon        | Font Awesome 4.7 + CoreUI Icons             |
+| Font        | Source Sans Pro (Google Fonts)              |
 
 ## Struktur Project
 
@@ -18,17 +21,21 @@ Sistem manajemen absensi karyawan sederhana dengan fitur CRUD lengkap, dibangun 
 Test FrontEnd/
 ├── assets/
 │   ├── css/
-│   │   └── backstrap.css      # Tema CSS kustom (Backstrap)
-│   └── js/                    # Dicadangkan untuk file JS
+│   │   └── custom.css             # Gaya CSS kustom aplikasi
+│   └── backstrap/                 # Aset template Backstrap asli
+│       ├── css/
+│       ├── js/
+│       ├── img/
+│       └── vendors/
 ├── config/
 │   └── database.php           # Konfigurasi koneksi MySQL (port 8111)
 ├── database/
 │   └── attendance.sql         # Skema database + data awal
 ├── includes/
-│   ├── header.php             # <head>, CDN Bootstrap, font, ikon
-│   ├── navbar.php             # Navigasi atas
-│   ├── sidebar.php            # Sidebar navigasi + logout
-│   └── footer.php             # Navigasi mobile bawah, Bootstrap JS
+│   ├── header.php             # <head>, CSS Backstrap + vendor
+│   ├── navbar.php             # CoreUI .app-header (nav atas)
+│   ├── sidebar.php            # CoreUI .sidebar + pembungkus .main
+│   └── footer.php             # Nav mobile bawah, JS Backstrap
 ├── pages/
 │   ├── dashboard.php          # Overview dengan kartu statistik
 │   ├── attendance-list.php    # Daftar dengan pencarian, urut, halaman

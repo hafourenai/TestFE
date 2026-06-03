@@ -1,20 +1,27 @@
-<nav class="navbar-backstrap d-flex align-items-center justify-content-between sticky-top">
-<div class="d-flex align-items-center gap-3">
-<a href="index.php?page=dashboard" class="brand">AttendEase</a>
-</div>
-<div class="d-none d-md-flex flex-grow-1" style="max-width: 400px; margin: 0 24px;">
-<div class="search-wrapper w-100">
-<span class="material-symbols-outlined search-icon">search</span>
-<input type="text" class="form-control form-backstrap" placeholder="Search records..." style="padding-left: 40px;"/>
-</div>
-</div>
-<div class="d-flex align-items-center gap-3">
-<button class="btn p-1 text-secondary position-relative">
-<span class="material-symbols-outlined">notifications</span>
+<header class="app-header bg-light border-0 navbar">
+<button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+<span class="navbar-toggler-icon"></span>
 </button>
-<div class="d-flex align-items-center gap-2">
-<img src="assets/admin.jpg" alt="Admin" class="rounded-circle" width="32" height="32" style="border: 1px solid var(--outline-variant); object-fit: cover;"/>
-<span class="d-none d-md-inline text-secondary" style="font-size: 13px; font-weight: 500;"><?php echo isset($_SESSION['full_name']) ? htmlspecialchars($_SESSION['full_name']) : 'Admin User'; ?></span>
+<button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="index.php?page=dashboard"><b class="brand-blue">Attend</b><span class="brand-light">Ease</span></a>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item d-md-down-none">
+<a class="nav-link" href="#"><i class="fa fa-bell-o"></i></a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+<img class="img-avatar" src="assets/admin.jpg" alt="Admin"/>
+</a>
+<div class="dropdown-menu dropdown-menu-right">
+<div class="dropdown-header"><strong><?php echo isset($_SESSION['full_name']) ? htmlspecialchars($_SESSION['full_name']) : 'Admin User'; ?></strong></div>
+<a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+<a class="dropdown-item" href="logout.php"><i class="fa fa-lock"></i> Logout</a>
 </div>
-</div>
-</nav>
+</li>
+</ul>
+<button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+<span class="navbar-toggler-icon"></span>
+</button>
+</header>

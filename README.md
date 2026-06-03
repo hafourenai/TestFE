@@ -10,9 +10,10 @@ A simple employee attendance management system with full CRUD operations, built 
 |-------------|------------------------------------------------|
 | Backend     | PHP 8.0 (Native)                               |
 | Database    | MySQL / MariaDB via MySQLi                     |
-| Frontend    | HTML5, CSS3, Bootstrap 5.3.2                   |
-| Icons       | Material Symbols (Google Icons)                |
-| Font        | Inter (Google Fonts)                           |
+| Frontend    | HTML5, CSS3, Bootstrap 4.6 + CoreUI 2         |
+| Template    | Backstrap (`@digitallyhappy/backstrap`)       |
+| Icons       | Font Awesome 4.7 + CoreUI Icons               |
+| Font        | Source Sans Pro (Google Fonts)                |
 
 ## Project Structure
 
@@ -20,17 +21,21 @@ A simple employee attendance management system with full CRUD operations, built 
 Test FrontEnd/
 ├── assets/
 │   ├── css/
-│   │   └── backstrap.css      # Custom CSS theme (Backstrap)
-│   └── js/                    # Reserved for future JS files
+│   │   └── custom.css             # App-specific custom styles
+│   └── backstrap/                 # Real Backstrap template assets
+│       ├── css/
+│       ├── js/
+│       ├── img/
+│       └── vendors/
 ├── config/
 │   └── database.php           # MySQL connection config (port 8111)
 ├── database/
 │   └── attendance.sql         # Database schema + seed
 ├── includes/
-│   ├── header.php             # <head>, CDN links (Bootstrap, fonts, icons)
-│   ├── navbar.php             # Top navigation bar
-│   ├── sidebar.php            # Sidebar navigation + logout
-│   └── footer.php             # Mobile bottom nav, Bootstrap JS
+│   ├── header.php             # <head>, Backstrap CSS + vendors
+│   ├── navbar.php             # CoreUI .app-header (top nav)
+│   ├── sidebar.php            # CoreUI .sidebar + .main wrapper
+│   └── footer.php             # Mobile bottom nav, Backstrap JS
 ├── pages/
 │   ├── dashboard.php          # Overview with stat cards + recent records
 │   ├── attendance-list.php    # List with search, sort, pagination

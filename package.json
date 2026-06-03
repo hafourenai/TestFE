@@ -1,0 +1,23 @@
+{
+  "name": "test-frontend",
+  "version": "1.0.0",
+  "description": "> **Bahasa Indonesia?** Lihat [README.id.md](README.id.md) — Dokumentasi dalam Bahasa Indonesia.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafourenai/TestFE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hafourenai/TestFE/issues"
+  },
+  "homepage": "https://github.com/hafourenai/TestFE#readme",
+  "dependencies": {
+    "@digitallyhappy/backstrap": "^0.5.1"
+  }
+}

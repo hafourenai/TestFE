@@ -4,31 +4,40 @@ function isActive($page) {
     global $current_page;
     return $current_page === $page;
 }
+function navActive($page) {
+    return isActive($page) ? 'active' : '';
+}
 ?>
-<div class="sidebar">
-<div class="px-4 mb-4">
-<h6 class="fw-bold mb-0" style="color: var(--on-surface); font-size: 16px;">Admin Panel</h6>
-<small style="color: var(--on-surface-variant); opacity: 0.7;">HR Department</small>
-</div>
-<nav class="flex-grow-1 d-flex flex-column">
-<a href="index.php?page=dashboard" class="nav-link <?php echo isActive('dashboard') ? 'active' : ''; ?>">
-<span class="material-symbols-outlined">dashboard</span>
-<span>Dashboard</span>
+<div class="app-body">
+<div class="sidebar sidebar-pills bg-transparent">
+<nav class="sidebar-nav">
+<ul class="nav">
+<li class="nav-title">Navigation</li>
+<li class="nav-item">
+<a class="nav-link <?php echo navActive('dashboard'); ?>" href="index.php?page=dashboard">
+<i class="fa fa-tachometer"></i> Dashboard
 </a>
-<a href="index.php?page=attendance-list" class="nav-link <?php echo isActive('attendance-list') ? 'active' : ''; ?>">
-<span class="material-symbols-outlined">calendar_today</span>
-<span>Attendance Data</span>
+</li>
+<li class="nav-item">
+<a class="nav-link <?php echo navActive('attendance-list'); ?>" href="index.php?page=attendance-list">
+<i class="fa fa-calendar"></i> Attendance Data
 </a>
-<a href="index.php?page=attendance-create" class="nav-link <?php echo isActive('attendance-create') ? 'active' : ''; ?>">
-<span class="material-symbols-outlined">person_add</span>
-<span>Add Attendance</span>
+</li>
+<li class="nav-item">
+<a class="nav-link <?php echo navActive('attendance-create'); ?>" href="index.php?page=attendance-create">
+<i class="fa fa-user-plus"></i> Add Attendance
 </a>
-<div class="mt-auto px-3 pt-3 border-top" style="border-color: var(--outline-variant) !important;">
-<a href="logout.php" class="nav-link logout-link">
-<span class="material-symbols-outlined">logout</span>
-<span>Logout</span>
+</li>
+<li class="divider"></li>
+<li class="nav-title">Account</li>
+<li class="nav-item">
+<a class="nav-link" href="logout.php">
+<i class="fa fa-sign-out"></i> Logout
 </a>
-</div>
+</li>
+</ul>
 </nav>
 </div>
-<div class="main-content">
+<main class="main">
+<div class="container-fluid">
+<div class="animated fadeIn">

@@ -40,55 +40,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Login - AttendancePro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="assets/css/backstrap.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+<title>Login - AttendEase</title>
+<link href="assets/backstrap/vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet"/>
+<link href="assets/backstrap/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet"/>
+<link href="assets/backstrap/css/style.min.css" rel="stylesheet"/>
+<link href="assets/css/custom.css" rel="stylesheet"/>
 </head>
-<body class="login-page">
-    <div class="login-container">
-        <div class="login-card">
-            <div class="login-header">
-                <div class="login-logo">
-                    <span class="material-symbols-outlined">badge</span>
-                </div>
-                <h1>AttendancePro</h1>
-                <p>Sign in to your account</p>
-            </div>
-
-            <?php if ($error): ?>
-                <div class="alert-backstrap-error mb-3"><?php echo htmlspecialchars($error); ?></div>
-            <?php endif; ?>
-
-            <form method="POST" action="">
-                <div class="mb-3">
-                    <label class="form-label login-label">Username</label>
-                    <div class="input-group">
-                        <span class="input-group-text login-input-icon">
-                            <span class="material-symbols-outlined">person</span>
-                        </span>
-                        <input type="text" name="username" class="form-control login-input" placeholder="Enter your username" required autofocus/>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label login-label">Password</label>
-                    <div class="input-group">
-                        <span class="input-group-text login-input-icon">
-                            <span class="material-symbols-outlined">lock</span>
-                        </span>
-                        <input type="password" name="password" class="form-control login-input" placeholder="Enter your password" required/>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-backstrap-primary btn-backstrap w-100" style="padding: 12px 16px;">Sign In</button>
-            </form>
-
-            <div class="login-footer">
-                <small class="text-secondary">First time? Run <a href="setup.php">setup.php</a> to create admin account.</small>
-            </div>
-        </div>
-    </div>
+<body class="app flex-row align-items-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6 col-lg-5">
+<div class="card-group">
+<div class="card p-4">
+<div class="card-body text-center">
+<h1><i class="fa fa-id-badge fa-3x text-primary mb-3"></i></h1>
+<h1 class="mb-1 font-weight-bold">AttendEase</h1>
+<p class="text-muted">Sign in to your account</p>
+<?php if ($error): ?>
+<div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+<?php endif; ?>
+<form method="POST" action="">
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fa fa-user"></i></span>
+</div>
+<input type="text" name="username" class="form-control" placeholder="Username" required autofocus/>
+</div>
+<div class="input-group mb-4">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fa fa-lock"></i></span>
+</div>
+<input type="password" name="password" class="form-control" placeholder="Password" required/>
+</div>
+<div class="row">
+<div class="col-12">
+<button type="submit" class="btn btn-primary px-4 btn-block"><i class="fa fa-sign-in"></i> Sign In</button>
+</div>
+</div>
+</form>
+<div class="mt-3">
+<small class="text-muted">First time? Run <a href="setup.php">setup.php</a> to create admin account.</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
