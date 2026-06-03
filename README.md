@@ -1,4 +1,6 @@
-# AttendancePro
+# AttendEase
+
+> **Bahasa Indonesia?** Lihat [README.id.md](README.id.md) — Dokumentasi dalam Bahasa Indonesia.
 
 A simple employee attendance management system with full CRUD operations, built with PHP, MySQL, and the Backstrap template.
 
@@ -6,7 +8,7 @@ A simple employee attendance management system with full CRUD operations, built 
 
 | Layer        | Technology                                     |
 |-------------|------------------------------------------------|
-| Backend     | PHP 8.0 (procedural, no framework)             |
+| Backend     | PHP 8.0 (Native)                               |
 | Database    | MySQL / MariaDB via MySQLi                     |
 | Frontend    | HTML5, CSS3, Bootstrap 5.3.2                   |
 | Icons       | Material Symbols (Google Icons)                |
@@ -58,7 +60,7 @@ This project was built as a solution to the following assignment:
 
 > Build a simple admin page for employee attendance using the **Backstrap** template.
 >
-> **a.** List page of employees who have clocked in — with update, delete, sort by & pagination
+> **a.** List page of employees who have clocked in, with update, delete, sort by & pagination
 >
 > **b.** Input form with fields: Name, Address, Gender, Attendance date, Check-in time, Check-out time
 
@@ -82,7 +84,7 @@ All assignment requirements are **fully completed**.
 
 ## How to Run
 
-1. Import `database/attendance.sql` into your MySQL server (default port: `8111`)
+1. Import `database/attendance.sql` into your MySQL server 
 2. Adjust `config/database.php` if your MySQL credentials differ
 3. Access `http://localhost/Test%20FrontEnd/setup.php` to create the admin account
 4. Login with username **`admin`** and password **`admin123`**
@@ -92,6 +94,3 @@ All assignment requirements are **fully completed**.
 
 [View on Canva](PASTE_YOUR_CANVA_LINK_HERE)
 
----
-
-**AttendancePro** — Built with Backstrap template.

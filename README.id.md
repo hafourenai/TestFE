@@ -1,4 +1,4 @@
-# AttendancePro
+# AttendaEase
 
 Sistem manajemen absensi karyawan sederhana dengan fitur CRUD lengkap, dibangun menggunakan PHP, MySQL, dan template Backstrap.
 
@@ -6,7 +6,7 @@ Sistem manajemen absensi karyawan sederhana dengan fitur CRUD lengkap, dibangun 
 
 | Lapisan      | Teknologi                                    |
 |-------------|----------------------------------------------|
-| Backend     | PHP 8.0 (prosedural, tanpa framework)        |
+| Backend     | PHP 8.0 (Murni)                              |
 | Database    | MySQL / MariaDB via MySQLi                   |
 | Frontend    | HTML5, CSS3, Bootstrap 5.3.2                 |
 | Ikon        | Material Symbols (Google Icons)              |
@@ -58,7 +58,7 @@ Project ini dibuat sebagai solusi dari tugas berikut:
 
 > Buatkan halaman admin sederhana untuk absensi karyawan menggunakan template **Backstrap**.
 >
-> **a.** Halaman list data karyawan yang telah absen — dengan fitur update, delete, sort by & pagination
+> **a.** Halaman list data karyawan yang telah absen, dengan fitur update, delete, sort by & pagination
 >
 > **b.** Halaman input data absensi dengan field: Nama, Alamat, Jenis kelamin, Tanggal absen, Jam masuk, Jam keluar
 
@@ -82,7 +82,7 @@ Seluruh persyaratan tugas **telah selesai** dikerjakan.
 
 ## Cara Menjalankan
 
-1. Import `database/attendance.sql` ke MySQL Anda (port default: `8111`)
+1. Import `database/attendance.sql` ke MySQL Anda 
 2. Sesuaikan `config/database.php` jika kredensial MySQL berbeda
 3. Akses `http://localhost/Test%20FrontEnd/setup.php` untuk membuat akun admin
 4. Login dengan username **`admin`** dan password **`admin123`**
@@ -91,7 +91,3 @@ Seluruh persyaratan tugas **telah selesai** dikerjakan.
 ## Dokumentasi Lengkap
 
 [Lihat di Canva](PASTE_YOUR_CANVA_LINK_HERE)
-
----
-
-**AttendancePro** — Dibangun dengan template Backstrap.
