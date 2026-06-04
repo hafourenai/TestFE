@@ -7,7 +7,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 }
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
-$validPages = ['dashboard', 'attendance-list', 'attendance-create', 'attendance-edit', 'attendance-delete'];
+$validPages = ['dashboard', 'attendance-list', 'attendance-create', 'attendance-edit', 'attendance-delete', 'settings'];
 if (!in_array($page, $validPages)) {
     $page = 'dashboard';
 }

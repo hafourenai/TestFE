@@ -22,7 +22,6 @@
 </a>
 </nav>
 
-<script src="assets/backstrap/vendors/jquery/js/jquery.min.js"></script>
 <script src="assets/backstrap/vendors/popper.js/js/popper.min.js"></script>
 <script src="assets/backstrap/vendors/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/backstrap/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>

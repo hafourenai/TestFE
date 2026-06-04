@@ -15,6 +15,22 @@ try {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )");
 
+    $conn->query("CREATE TABLE IF NOT EXISTS settings (
+        setting_key VARCHAR(50) PRIMARY KEY,
+        setting_value VARCHAR(255) NOT NULL
+    )");
+
+    $checkCol = $conn->query("SHOW COLUMNS FROM attendance LIKE 'updated_at'");
+    if ($checkCol->num_rows === 0) {
+        $conn->query("ALTER TABLE attendance ADD COLUMN updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER created_at");
+    }
+
+    $stmt = $conn->prepare("INSERT IGNORE INTO settings (setting_key, setting_value) VALUES (?, ?)");
+    $key = 'late_threshold';
+    $val = '09:00:00';
+    $stmt->bind_param("ss", $key, $val);
+    $stmt->execute();
+
     $result = $conn->query("SELECT COUNT(*) as count FROM users WHERE username = 'admin'");
     $row = $result->fetch_assoc();
 

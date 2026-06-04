@@ -31,6 +31,11 @@ function navActive($page) {
 <li class="divider"></li>
 <li class="nav-title">Account</li>
 <li class="nav-item">
+<a class="nav-link <?php echo navActive('settings'); ?>" href="index.php?page=settings">
+<i class="fa fa-cog"></i> Settings
+</a>
+</li>
+<li class="nav-item">
 <a class="nav-link" href="logout.php">
 <i class="fa fa-sign-out"></i> Logout
 </a>

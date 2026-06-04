@@ -136,6 +136,11 @@ select.form-control {
     background-position: right 0.75rem center;
     padding-right: 2rem;
 }
+select.form-control-sm {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    height: auto;
+}
 .form-label {
     font-size: 0.75rem;
     font-weight: 600;
@@ -316,11 +321,36 @@ select.form-control {
     font-weight: 300;
     color: #6c757d;
 }
+.app-header .navbar-brand:hover,
+.app-header .navbar-brand:focus {
+    text-decoration: none;
+}
+.app-header .navbar-brand .brand-blue,
+.app-header .navbar-brand:hover .brand-blue,
+.app-header .navbar-brand:focus .brand-blue {
+    color: #0d6efd;
+}
+.app-header .navbar-brand .brand-light,
+.app-header .navbar-brand:hover .brand-light,
+.app-header .navbar-brand:focus .brand-light {
+    color: #6c757d;
+}
 .app-header .nav-link {
     color: #6c757d;
     transition: color var(--transition);
 }
 .app-header .nav-link:hover {
+    color: #495057;
+}
+
+.toggle-password {
+    cursor: pointer;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    transition: color var(--transition), background var(--transition);
+}
+.toggle-password:hover {
+    background: #e9ecef;
     color: #495057;
 }
 .img-avatar {
@@ -332,19 +362,16 @@ select.form-control {
 
 .app.flex-row.align-items-center {
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #d2e3fc 0%, #e8f1fb 50%, #f5f8ff 100%);
 }
 .app.flex-row .card-group .card {
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-radius: var(--card-radius);
+    box-shadow: 0 4px 24px rgba(13,110,253,0.08), var(--card-shadow);
     border: none;
+    border-top: 4px solid #0d6efd;
 }
 .app.flex-row .card-group .card:hover {
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-.app.flex-row .btn-primary {
-    padding: 0.65rem 1rem;
-    font-size: 0.95rem;
+    box-shadow: var(--card-shadow-hover);
 }
 
 h2.font-weight-bold {

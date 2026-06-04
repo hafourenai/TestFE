@@ -13,5 +13,6 @@
 <link href="assets/backstrap/css/style.min.css" rel="stylesheet"/>
 <link href="assets/backstrap/vendors/pace-progress/css/pace.min.css" rel="stylesheet"/>
 <link href="assets/css/custom.css" rel="stylesheet"/>
+<script src="assets/backstrap/vendors/jquery/js/jquery.min.js"></script>
 </head>
 <body class="app aside-menu-fixed sidebar-lg-show">

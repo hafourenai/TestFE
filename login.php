@@ -55,40 +55,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="col-md-6 col-lg-5">
 <div class="card-group">
 <div class="card p-4">
-<div class="card-body text-center">
-<h1><i class="fa fa-id-badge fa-3x text-primary mb-3"></i></h1>
-<h1 class="mb-1 font-weight-bold">AttendEase</h1>
-<p class="text-muted">Sign in to your account</p>
-<?php if ($error): ?>
-<div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
-<?php endif; ?>
-<form method="POST" action="">
-<div class="input-group mb-3">
-<div class="input-group-prepend">
-<span class="input-group-text"><i class="fa fa-user"></i></span>
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <b class="brand-blue" style="font-size:1.5rem;font-weight:700;">Attend</b><span class="brand-light" style="font-size:1.5rem;font-weight:300;color:#6ea8fe;">Ease</span>
+                    </div>
+                    <p class="text-muted mb-4">Sign in to your account</p>
+                    <?php if ($error): ?>
+                    <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
+                    <?php endif; ?>
+                    <form method="POST" action="">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input type="text" name="username" class="form-control" placeholder="Username" required autofocus/>
+                        </div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required/>
+                            <div class="input-group-append">
+                                <span class="input-group-text toggle-password" id="togglePassword">
+                                    <i class="fa fa-eye" id="toggleIcon"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-sign-in"></i> Sign In</button>
+                    </form>
+                    <div class="mt-3">
+                        <small class="text-muted">First time? Run <a href="setup.php">setup.php</a> to create admin account.</small>
+                    </div>
+                </div>
 </div>
-<input type="text" name="username" class="form-control" placeholder="Username" required autofocus/>
-</div>
-<div class="input-group mb-4">
-<div class="input-group-prepend">
-<span class="input-group-text"><i class="fa fa-lock"></i></span>
-</div>
-<input type="password" name="password" class="form-control" placeholder="Password" required/>
-</div>
-<div class="row">
-<div class="col-12">
-<button type="submit" class="btn btn-primary px-4 btn-block"><i class="fa fa-sign-in"></i> Sign In</button>
-</div>
-</div>
-</form>
-<div class="mt-3">
-<small class="text-muted">First time? Run <a href="setup.php">setup.php</a> to create admin account.</small>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+<script>
+document.getElementById('togglePassword').addEventListener('click', function() {
+    var passwordInput = document.getElementById('password');
+    var icon = document.getElementById('toggleIcon');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+});
+</script>
 </body>
 </html>
