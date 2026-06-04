@@ -97,4 +97,4 @@ Seluruh persyaratan tugas **telah selesai** dikerjakan.
 
 ## Dokumentasi Lengkap
 
-[Lihat di Canva](PASTE_YOUR_CANVA_LINK_HERE)
+[Lihat di Canva](https://canva.link/ju13s9kxh7fl22t)
